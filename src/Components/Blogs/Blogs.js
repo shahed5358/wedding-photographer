@@ -3,7 +3,7 @@ import './Blogs.css';
 
 const Blogs = () => {
     return (
-        <div>
+        <div className="blogs">
             <h3>Q1 : What is the difference between authentication process and authorization process?</h3>
             <p>Authentication : Authentication is the process of determining the users identity via the available credentials, thus verifying the identity. User identity is confirmed. User and user server is verified. Data is available via Token IDs. User can partially change the authentication details as per the requirement. </p>
             <p>Authorization : Authorization, meanwhile, is the process of providing permission to access the system. Here, the user is given permission to access the system / resources after validation. Here it is validated if the user is allowed to access via some defined rules. Data provided via Access token. User cannot modify the Authorization permissions as it is given to a user by the owner/manager of the system, and only has the authority to change it.</p>
