@@ -1,0 +1,13 @@
+.top-banner{
+    display: flex;
+    height:400px;
+}
+.half-width{
+    margin:15px;
+    padding: 20px;
+    width:50%;
+}
+.half-width img{
+    width: 100%;
+    height: 100%;
+}
