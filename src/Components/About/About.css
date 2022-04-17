@@ -1,0 +1,12 @@
+.about h1{
+    text-align: center;
+    color: goldenrod;
+}
+.about img{
+    width: 400px;
+    height: 400px;
+    margin-left: 450px;
+}
+.about{
+    margin: 30px;
+}
