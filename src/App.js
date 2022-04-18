@@ -8,6 +8,7 @@ import Login from './Components/Login/Login';
 import Services from './Components/Services/Services';
 import Footer from './Components/Footer/Footer';
 import Blogs from './Components/Blogs/Blogs';
+import Contact from './Components/Contact/Contact';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
         <Route path="/login" element={<Login></Login>}></Route>
         <Route path="/services" element={<Services></Services>}></Route>
         <Route path="/blogs" element={<Blogs></Blogs>}></Route>
+        <Route path="/contact" element={<Contact></Contact>}></Route>
       </Routes>
       <Footer></Footer>
     </div>
