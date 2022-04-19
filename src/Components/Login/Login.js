@@ -21,7 +21,7 @@ const Login = () => {
                 <p>
                     New to Wedding Photographer ? <Link className="form-link" to="/signUp">Create an account</Link>
                 </p>
-                <p>or</p>
+                <p style={{textAlign:'center'}}>or</p>
                 <button className="form-btn">Continue With Google</button>
             </div>
         </div>

@@ -25,7 +25,7 @@ const SignUp = () => {
                 <p>
                     Alrady have an account ? <Link className="form-link" to="/login">Login</Link>
                 </p>
-                <p>or</p>
+                <p style={{textAlign: 'center'}}>or</p>
                 <button className="form-btn">Continue With Google</button>
             </div>
         </div>
