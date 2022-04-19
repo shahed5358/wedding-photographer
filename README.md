@@ -3,7 +3,7 @@
 
 ## Live Site Link
 
-<a href="http://localhost:3000/home" ></a>
+live site link:<a href="http://localhost:3000/home">
 
 ### `npm start`
 
