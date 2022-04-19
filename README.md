@@ -1,10 +1,9 @@
 # Wedding Photographer
 
+
+## Live Site Link
+
 <a href="http://localhost:3000/home" ></a>
-
-## Available Scripts
-
-In the project directory, you can run:
 
 ### `npm start`
 
