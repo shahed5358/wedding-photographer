@@ -1,4 +1,11 @@
-img{
+.service{
+    border:1px solid lightgrey;
+    border-radius: 10px;
+    padding-bottom: 5px;
+}
+
+
+.service img{
     width:400px;
     height:400px;
 }
