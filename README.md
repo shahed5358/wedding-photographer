@@ -1,6 +1,6 @@
 # Wedding Photographer
 
-<a href="http://localhost:3000/home" />
+<a href="http://localhost:3000/home" ></a>
 
 ## Available Scripts
 
