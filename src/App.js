@@ -11,6 +11,7 @@ import Contact from './Components/Contact/Contact';
 import SignUp from './Components/SignUp/SignUp';
 import RequireAuth from './Components/RequireAuth/RequireAuth';
 import NotFound from './Components/NotFound/NotFound';
+import Services from './Components/Services/Services';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home></Home>}></Route>
         <Route path="/home" element={<Home></Home>}></Route>
+        <Route path="/services" element={<Services></Services>}></Route>
         <Route path="/about" element={
           <RequireAuth>
             <About></About>
