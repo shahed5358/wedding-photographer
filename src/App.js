@@ -10,6 +10,7 @@ import Blogs from './Components/Blogs/Blogs';
 import Contact from './Components/Contact/Contact';
 import SignUp from './Components/SignUp/SignUp';
 import RequireAuth from './Components/RequireAuth/RequireAuth';
+import NotFound from './Components/NotFound/NotFound';
 
 function App() {
   return (
@@ -31,6 +32,7 @@ function App() {
         <Route path="/contact" element={<Contact></Contact>}></Route>
         <Route path="/login" element={<Login></Login>}></Route>
         <Route path="/signup" element={<SignUp></SignUp>}></Route>
+        <Route path="*" element={<NotFound></NotFound>}></Route>
       </Routes>
       <Footer></Footer>
     </div>

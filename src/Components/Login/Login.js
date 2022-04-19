@@ -1,3 +1,4 @@
+// import { sendEmailVerification } from 'firebase/auth';
 import React, { useState } from 'react';
 import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import { Link, useNavigate } from 'react-router-dom';
@@ -13,7 +14,7 @@ const Login = () => {
         user,
         loading,
         error,
-      ] = useSignInWithEmailAndPassword(auth);
+      ] = useSignInWithEmailAndPassword(auth, {sendEmailVerification : true});
     const navigate = useNavigate();  
 
     const handleEmailBlur = event => {

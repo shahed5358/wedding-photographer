@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
-import auth from '../../firebase.init'
+import { useCreateUserWithEmailAndPassword, useSignInWithGoogle } from 'react-firebase-hooks/auth';
+import auth from '../../firebase.init';
 import './SignUp.css'
 
 const SignUp = () => {
@@ -11,6 +11,7 @@ const SignUp = () => {
     const [confirmPassword, setConfirmPassword] = useState('');
     const [error, setError] = useState('');
     const navigate = useNavigate();
+    const [signInWithGoogle, loading] = useSignInWithGoogle(auth);
 
     const [createUserWithEmailAndPassword, user] = useCreateUserWithEmailAndPassword(auth)
 
@@ -43,8 +44,10 @@ const SignUp = () => {
         createUserWithEmailAndPassword(email, password);
     }
 
-    const handleGoogleSignIn = () => {
-        console.log('working');
+    if(error) {
+        return <div>
+            <p style={{color:'red'}}>Error : {error.message}</p>
+        </div>;
     }
 
     return (
@@ -71,7 +74,7 @@ const SignUp = () => {
                     Alrady have an account ? <Link className="form-link" to="/login">Login</Link>
                 </p>
                 <p style={{textAlign: 'center'}}>or</p>
-                <button onClick={handleGoogleSignIn} className="form-btn">Continue With Google</button>
+                <button onClick={() => signInWithGoogle()} className="form-btn">Continue With Google</button>
             </div>
         </div>
     );
