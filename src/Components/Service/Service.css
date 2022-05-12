@@ -2,10 +2,9 @@
     border:1px solid lightgrey;
     border-radius: 10px;
     padding-bottom: 5px;
+    padding: 10px;
 }
-
-
 .service img{
-    width:400px;
-    height:400px;
+    width:100%;
+    height:300px;
 }

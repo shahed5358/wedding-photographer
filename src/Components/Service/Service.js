@@ -6,10 +6,10 @@ const Service = ({service}) => {
     return (
         <div className="service">
             <img src={img} alt=""/>
-            <h1>{name}</h1>
-            <h3>{price}</h3>
+            <h2>{name}</h2>
+            <h4 style={{color:"red"}}>{price}</h4>
             <p>{description}</p>
-            <button>Check Out</button>
+            <button className="btn btn-primary">Check Out</button>
             
         </div>
     );

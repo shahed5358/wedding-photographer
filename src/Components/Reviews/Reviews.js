@@ -14,7 +14,7 @@ const Reviews = () => {
 
     return (
         <div>
-            <h1 className="reviews-title">Reviews : {reviews.length}</h1> 
+            <h1 className="reviews-title">Reviews</h1> 
             <div className="reviews-container">
             {
                 reviews.map(review => <Review

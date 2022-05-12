@@ -1,14 +1,53 @@
-.about h1{
+.about-container h1{
     text-align: center;
-    color: goldenrod;
+    color: rgb(32, 218, 88);
 }
-.about img{
+.about-container img{
     width: 400px;
     height: 400px;
-    margin-left: 450px;
-    align-items: center;
-  justify-content: center;
+    margin-left: 430px;
 }
-.about{
-    margin: 30px;
+
+.about-container{
+    padding: 20px;
+    height:600px;
+}
+
+
+
+/* make responsive */
+
+@media only screen and (max-width:576px){
+    .about-container h1{
+        color: red;
+        font-size:21px;
+        margin: 40px;
+    }
+    .about-container img{
+        width: 200px;
+        height: 200px;
+        margin-left: 80px;
+        margin-bottom: 60px;
+    }
+    .about-container{
+        padding: 10px;
+        height:750px;
+    }
+}
+
+@media only screen and (min-width:577px) and (max-width:992px){
+    .about-container h1{
+        color:blue;
+        margin: 50px;
+    }
+    .about-container img{
+        width: 450px;
+        height: 450px;
+        margin-left: 170px;
+        margin-bottom:80px;
+    }
+    .about-container{
+        padding: 20px;
+        height:990px;
+    }
 }
