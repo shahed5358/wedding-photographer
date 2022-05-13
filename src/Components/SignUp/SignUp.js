@@ -6,6 +6,7 @@ import {
 } from "react-firebase-hooks/auth";
 import auth from "../../firebase.init";
 import { Button, Form } from "react-bootstrap";
+import google from "../../images/google.png";
 
 const SignUp = () => {
   const [email, setEmail] = useState("");
@@ -34,7 +35,7 @@ const SignUp = () => {
     navigate("/home");
   }
 
-  const handleFormSubmit = (event) => {
+  const handleCreateUser = (event) => {
     event.preventDefault();
     if (password !== confirmPassword) {
       setError("Your password did not match");
@@ -50,14 +51,14 @@ const SignUp = () => {
   if (error) {
     return (
       <div>
-        <p style={{ color: "red" }}>Error : {error.message}</p>
+        <p className="text-danger">Error : {error.message}</p>
       </div>
     );
   }
 
   return (
     <div className="w-50 mx-auto mt-5 mb-5 ">
-      <Form onSubmit={handleFormSubmit}>
+      <Form onSubmit={handleCreateUser}>
         <h2 className="text-primary">Please Sign Up</h2>
         <Form.Group className="mb-3" controlId="formBasicEmail">
           <Form.Label>Email address</Form.Label>
@@ -79,34 +80,47 @@ const SignUp = () => {
             required
           />
         </Form.Group>
-        <Form.Group className="mb-3" controlId="formBasicPassword">
+        <Form.Group className="mb-3">
           <Form.Label>Confirm Password</Form.Label>
           <Form.Control
             onBlur={handleConfirmPasswordBlur}
-            type="confirmPassword"
-            placeholder="Password"
+            type="password"
+            placeholder="Confirm Password"
             required
           />
         </Form.Group>
-        <p style={{ color: "red" }}>{error?.message}</p>
+        <p className="text-danger">{error?.message}</p>
         {loading && <p>Loading...</p>}
         <Button variant="primary" type="submit">
           Submit
         </Button>
         <p>
           Alrady have an account ?{" "}
-          <Link className="form-link" to="/login">
+          <Link className="text-decoration-none " to="/login">
             Login
           </Link>
         </p>
-        <p style={{ textAlign: "center" }}>or</p>
-        <button className="btn btn-success"onClick={() => signInWithGoogle()}>
+      </Form>
+      <div className="d-flex align-items-center">
+        <div style={{ height: "1px" }} className="bg-primary w-50">
+          {" "}
+        </div>
+        <p className="mt-2 px-2">or</p>
+        <div style={{ height: "1px" }} className="bg-primary w-50">
+          {" "}
+        </div>
+      </div>
+      <div>
+        <button
+          className="btn btn-info w-50 d-block mx-auto"
+          onClick={() => signInWithGoogle()}
+        >
+          <img className="mx-2" src={google} alt="" />
           Continue With Google
         </button>
-      </Form>
+      </div>
     </div>
   );
 };
 
 export default SignUp;
-

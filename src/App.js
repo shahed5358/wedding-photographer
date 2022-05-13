@@ -13,6 +13,7 @@ import NotFound from './Components/NotFound/NotFound';
 import Services from './Components/Services/Services';
 import Reviews from './Components/Reviews/Reviews';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import Checkout from './Components/Checkout/Checkout';
 
 function App() {
   return (
@@ -31,6 +32,11 @@ function App() {
         <Route path="/blogs" element={
           <RequireAuth>
             <Blogs></Blogs>
+          </RequireAuth>
+        }></Route>
+        <Route path="/checkout" element ={
+          <RequireAuth>
+            <Checkout></Checkout>
           </RequireAuth>
         }></Route>
         <Route path="/login" element={<Login></Login>}></Route>
