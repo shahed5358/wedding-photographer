@@ -7,7 +7,9 @@ const Footer = () => {
         <div className="footer">
             <p>Copyright  2022 || All rights reserved</p>
             <ul>
-                 <li> <Link to="/contact">Contact</Link></li>
+                 <li><Link to="/home">Home</Link></li>
+                 <li> <Link to="/reviews">Reviews</Link></li>
+                 <li> <Link to="/services">Services</Link></li>
                  <li><Link to="/blogs">Blogs</Link></li>
             </ul>
         </div>
