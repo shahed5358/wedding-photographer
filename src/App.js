@@ -14,6 +14,7 @@ import Services from './Components/Services/Services';
 import Reviews from './Components/Reviews/Reviews';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Checkout from './Components/Checkout/Checkout';
+import Booking from './Components/Booking/Booking';
 
 function App() {
   return (
@@ -42,6 +43,11 @@ function App() {
         <Route path="/login" element={<Login></Login>}></Route>
         <Route path="/signup" element={<SignUp></SignUp>}></Route>
         <Route path="*" element={<NotFound></NotFound>}></Route>
+        <Route path="/booking" element={
+          <RequireAuth>
+            <Booking></Booking>
+          </RequireAuth>
+        }></Route>
       </Routes>
       <Footer></Footer>
     </div>
